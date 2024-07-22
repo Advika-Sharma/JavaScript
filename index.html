@@ -6,17 +6,260 @@
     <title>Document</title>
     <style>
         h1{
-            color:rgb(8, 8, 165);
+            color:white;
+            background-color: black;
         }
     </style>
 </head>
 <body>
-    <h1>This is my heading tag</h1>
+    <h1 id="h">This is my heading tag</h1>
+    <button id="btn">click</button>
 
     <script>
-        console.log("hello javacript")
-        alert("hello i am javascript")
-        document.write("Javascript")
+        //variable
+
+        //a="advika"
+        //a=50
+
+        //console.log(typeof a)
+        //console.log(a)
+
+        //datatypes
+        //number (no int or float only num)
+        //string
+        //boolean
+        //object
+        //undefined
+        //null
+        //symbol(to define unique object)
+
+        //3 keywords to define variable 
+        //var(can reassign as well as redeclare) (used rarely)
+        //let ES6 (WE CAN NOT REDECLARE BUT CAN REASSIGN)
+        //const ES6 (can not redeclare not even reassign)
+
+        var o= 10;
+        o=100;
+        var o=80;
+
+        console.log(o)
+
+        let m=20;
+        //X(redeclare)X let b=50//
+        m=20;//(reassign)// 
+
+        console.log(m)
+
+        const n=30;
+        console.log(n)
+
+        {
+            var o=10;
+        }
+        console.log(o) //console can be written even insidde or out
+
+        {
+            let m=50;
+            console.log(m)//can only be written inside the braces
+        }
+
+        var i =10;
+        for(var i=0;i<5;i++){}
+            console.log(i)
+
+            let z =10;
+        for(let z=0;z<5;z++){}
+            console.log(z)
+
+
+        output()
+        
+        function output(){
+            console.log("hello Javascript")
+        }
+
+
+
+        //hosting means ->define then assign 
+        console.log(h=10)
+
+        //let h; (not a hosting variable declaration)
+        var h; //(hosting variable declaration)
+
+
+        //operators
+        console.log(10<5)
+        console.log(5<=5)
+        console.log('A'>'B')
+        console.log('a'<'b')
+        console.log('5'==5)
+        console.log('5'===5)
+        console.log('7'!=7)
+        console.log('7'!==7)
+        console.log(5!=5)
+        console.log(3**2)//exponent
+        console.log(3*2)//multiply
+
+
+        let age= 10;
+        if(age>=18)
+        {
+            console.log("aap vote de sakte ho")
+        }
+        else if(age>=10 && age <18)
+        {
+            console.log("ki aap half vote lge ga")
+        }
+        else{
+            console.log("ki phle app bade ho")
+        }
+
+
+
+        let a=5
+        let b=6
+        let c=2
+        let d=9
+
+
+        let max = a;
+
+        if (b > max) {
+            max = b;
+        }
+
+        if (c > max) {
+            max = c;
+        }
+
+        if (d > max) {
+            max = d;
+        }
+
+        console.log("The maximum value is: " + max);
+
+
+
+        // do{
+        //     console.log("hello")
+        // }while(x==5);
+
+        // let y = 0;
+        // while(false){
+        //     console.log(y)
+        //     y++
+        // }
+
+        // for(let z = 0; z<5 ;z++){
+        //     console.log(z)
+        // }
+
+
+
+        //functions
+
+        function output(a=200,b=100){ //a,b is parameter
+            //console.log(a+b) or 
+           // return a+b
+            console.log(a+b)
+        }
+
+        //console.log (output (10,20)) //10 20 is argument or
+
+        //let ans = output(10,20); to activate default parameter value of b
+        //let ans = output(10);
+        //console.log(ans)
+
+
+        (function(a,b){
+           // console.log("hello advika",a*b)  or 
+           console.log(`hello advika ${a*b}`) //we use backticks ` for accessing both expression and variables
+        })(10,20) //IIFE (IMMEDIATELY INVOLVED FUNCTION EXPRESSION) 
+        //needs to be called immediately after the code nd can be called only once
+
+
+        let f1= function(a,b){
+            return a+b;
+        };
+
+        let f2= function(a,b){
+            console.log(a-b);
+        };
+
+        let ans = f1(10,20);
+        console.log(ans);
+        f2(60,10);
+        //can be called whenever required also can be used multiple times
+
+        //let f3 = (a,b)=>{
+        //return a+b}
+        //console.log(f3(10,20)) or
+
+        let f3 = (a,b)=>a+b
+        console.log(f3(10,40))  
+
+        //closure ->surrounding also return with function (lexical scoping)
+        function outer (){
+        let f=10;
+        let k=20;
+        
+        function inner(){
+
+            console.log(f+k)
+            }
+
+        return inner ;
+        }
+        let que = outer ();
+        que()
+
+
+
+        //call back function 
+
+        //function f4(q){
+        //console.log("hello i am f1 function")
+         //   q()
+        //}
+
+        //function f5(){
+        //console.log("hello i am f2 function")
+        //}
+
+        //f4(f5)
+
+
+
+        function ram(u,e,r){
+            r(u,e)
+        }
+
+        
+        function add(g,h){
+            console.log(g+h)
+            
+        }
+
+        ram(10,20,add)
+
+
+        function data(f6){
+        f6()}
+
+        data(function(){
+        console.log("hey java script !!!")
+        })
+
+
+        
+        
+
+
+
+
+        //console.log("hello javacript")//
+       // alert("hello i am javascript")//
+        //document.write("Javascript")//
     </script>
 </body>
 </html>
