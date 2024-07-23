@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <textarea name="" id="text" rows="10" cols="30"></textarea>
+    <div class="text" id="text1"></div>
+
+
+    <script>
+           document.getElementById("text").oninput=function(){
+            let text=document.getElementById("text").value;
+            console.log(text)
+            document.getElementById("text1").innerHTML=`<h1>${text}</h1>`;
+        }
+    </script>
+</body>
+</html>

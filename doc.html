@@ -28,7 +28,7 @@
     </style>
 </head>
 <body id="bo">
-    <div class="box">
+    <div class="box" id="boxs">
         <p id="para">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio reprehenderit a fuga assumenda. Voluptatibus quisquam repellendus neque saepe. Provident velit enim, animi aliquam vero nostrum earum nobis expedita temporibus iusto. Ipsam praesentium odio ullam magni ducimus nemo cum dignissimos omnis amet ad quibusdam harum sint, porro, officia cupiditate consequatur exercitationem nostrum vduabcynfwmehbfjenfhx blx73hnfx4riwev wbrxufyn3wiea
         </p><br>
@@ -38,6 +38,7 @@
     <button id="inc">+</button>
     <button id="dec">-</button>
     <input type="color" id="col">
+    <input type="range" id="ran">
 
 </div>
 </body>
@@ -67,9 +68,14 @@
         console.log(counter);
     }
 
-    document.getElementById("col").onclick=function(){
+    document.getElementById("col").oninput=function(){
         
-        document.getElementById("para").style.backgroundColor=document.getElementById("col").value;
+        document.getElementById("boxs").style.backgroundColor=document.getElementById("col").value;
+    }
+
+    document.getElementById("ran").oninput=function(){
+        
+        document.getElementById("para").style.fontSize=counter+"px";
     }
 </script>
 </html>
