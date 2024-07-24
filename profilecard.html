@@ -67,5 +67,11 @@
             </ul>
         </div>
     </div>
+    <script>
+        document.getElementById("text").oninput=function(){
+            let text=document.getElementById("text").value;
+            console.log(text)
+            document.getElementById("text1").innerHTML=`<h1>${text}</h1>`;
+    </script>
 </body>
 </html>

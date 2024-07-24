@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <style>*{
+    <style>
+      *{
       margin: 0px;
       padding: 0px;
       box-sizing: border-box;
-  }
+      border-radius: 30px;
+      border-width: 3px;
+      margin: 2px;
+      }
+      body {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD6XnutDX_Un-qlfM-G7PJ-Kp2CvxuES_BIR4S9eF7PndVurUKKa0LE_Yf5Fl-aV1cyds&usqp=CAU");
+      }
   .calculator {
-      margin-top: 70px;
+      margin-top: 50px;
       margin-left: 500px;
       width: 320px;
+      background-color:skyblue;
+      padding: 30px;
+      
     }
     .output {
       background: black;
@@ -23,6 +33,7 @@
       padding-right: 10px;
       text-align: end;
       width: 100%;
+      
     }
     .keys {
       display: grid;
@@ -35,17 +46,17 @@
       font-size: 25px;
     }
     .key:hover {
-      background-color:bisque;
+      background-color:rgb(240, 160, 62);
     }
     .enter {
       grid-column: 4 / 5;
       grid-row: 2 / span 4;
-      background: skyblue;
+      background: rebeccapurple;
     }
   </style>
 </head>
 <body>
-        <div class="calculator">
+     <div class="calculator">
             <input class="output">
             <div class="keys">
               <button class="key">+</button>
@@ -81,14 +92,12 @@
            let val = document.querySelector("input").value;
             console.log(eval(val))
             document.querySelector("input").value=eval(val)
-
           }
           else{
           document.querySelector("input").value=document.querySelector("input").value += i.innerText;
           }
        }
       }
-
       document.getElementById("ac").onclick= function()
       {
         document.querySelector("input").value=''
