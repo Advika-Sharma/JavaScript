@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style></style>
 </head>
 <body>
     
+
+    <input type="text" name="" id="">
+    <button>genrate</button>
+
+<script>
+    document.querySelector("button").onclick= function(){
+        let color =`${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)}`
+        document.querySelector("input").value= color;
+        document.body.style.backgroundColor= `rgb(${color})`;
+    }
+</script>
 </body>
 </html>
