@@ -3,21 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style></style>
+    <title>Random Color Boxes</title>
+    <style>
+        .color-box {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: none;
+            border-radius: 30%;
+        }
+        .color-box:hover{
+
+            background-color: rgb(255, 255, 255); 
+            
+        }
+    </style>
 </head>
 <body>
+    <div id="container">
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+        <div class="color-box"></div>
+    </div>
     
-
-    <input type="text" name="" id="">
-    <button>genrate</button>
-
-<script>
-    document.querySelector("button").onclick= function(){
-        let color =`${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)}`
-        document.querySelector("input").value= color;
-        document.body.style.backgroundColor= `rgb(${color})`;
-    }
-</script>
+    <script>
+        function getRandomColor() {
+            let color = `${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)}`;
+            return `rgb(${color})`;
+        }
+        setInterval(() => {
+            let boxes = document.querySelectorAll('.color-box');
+            boxes.forEach (box => {
+                box.style.backgroundColor = getRandomColor();
+            });
+        }, 500);
+    </script>
 </body>
 </html>
