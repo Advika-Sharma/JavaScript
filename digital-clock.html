@@ -20,6 +20,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMyzKY7Yn3fJkwknBpWBwpMV9VKsWPTHHaMQ&s");
         }
         .upper{
             display: flex;
@@ -29,10 +30,12 @@
             padding: 20px;
             border-radius: 200px;
             box-shadow: 5px 5px 5px 5px black;
+            
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7EIWAwWtYFOu2seMTPWAcWgBqnJWyE9mAfw&s");
         }
         #hr,#min,#sec,.i{
             margin: 20px;
-            font-size: 200px;
+            font-size: 100px;
         }
         </style>
 </head>
@@ -46,16 +49,18 @@
             <div id="sec">00</div>
         </div>
     <script>
-        let time=new Date()
+       setInterval(()=>{ let time=new Date()
         console.log(time)
         let s=time.getSeconds()
         console.log(s)
-        if(s<10){
+   
+            if(s<10){
         document.querySelector("#sec").innerHTML="0"+s}
         else{
         document.querySelector("#sec").innerHTML=s
 
         }
+       
         let m=time.getMinutes()
         console.log(m)
         if(m<10){
@@ -75,7 +80,7 @@
         else{
             document.querySelector("#hr").innerHTML=h
 
-        }
+        }},1000)
     </script>
     
 </body>

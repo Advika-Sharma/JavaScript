@@ -11,20 +11,18 @@
     <button id="pop">Pop</button>
 
     <script>
-        document.querySelector("#push").onclick=function()
-        {
-             let push =document.querySelector("input").value;
-             document.querySelector("input").value=''
-             document.querySelector("input").focus()
-            console.log(push)
+        let a=[];
+        document.querySelector("#push").onclick = function(){
+            let val = document.querySelector("input").value;
+        a.push(val)
+        console.log(a)
         }
 
-        document.querySelector("#pop").onclick=function()
-        {
-             let pop =document.querySelector("input").value;
-             document.querySelector("input").value=''
-             document.querySelector("input").focus()
-            console.log(pop)
+        let b=[];
+        document.querySelector("#pop").onclick = function(){
+            let val = document.querySelector("input").value;
+        b.pop(val)
+        console.log(b)
         }
     </script>
 </body>
