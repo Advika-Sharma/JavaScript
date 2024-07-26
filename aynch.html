@@ -27,21 +27,26 @@
         //},3000)
 
 
-        //call back
+        //call back function(for api fetching)--->call back hell---->promises-------->promise chain -------->aysnc await
 
         function food(dish,order){
                
             setTimeout(()=>{
                 console.log(dish)
-                order()
+                if(order){
+                    order()
+                }
             },2000)
         }
 
         food("pizza",()=>{
             food("burger",()=>{
-                food("icecream")
+                food("ice-cream",()=>{
+                    food("cold-drink")
+                })
             })
         })
+        
         
 
     </script>
