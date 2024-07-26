@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.log("i am one")
+        console.log("i am two")
+        console.log("i am three")
+
+        setTimeout(()=>{
+
+        for ( let i =0; i<100; i++){
+            console.log(i)
+        }})
+
+        console.log("i am four")
+        console.log("i am five"),5000
+
+
+        //setTimeout(()=>{
+        //    console.log("hello")
+        //},3000)
+
+
+        //call back
+
+        function food(dish,order){
+               
+            setTimeout(()=>{
+                console.log(dish)
+                order()
+            },2000)
+        }
+
+        food("pizza",()=>{
+            food("burger",()=>{
+                food("icecream")
+            })
+        })
+        
+
+    </script>
+</body>
+</html>
