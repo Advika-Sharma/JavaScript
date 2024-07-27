@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Object</title>
+</head>
+<body>
+
+    <h1>Output in Console : </h1>
+    <h2> * Defining Protoype Object</h2>
+    
+    <script>
+
+        // let obj={
+
+        //     output()
+        //     {console.log("hello");},
+
+        //     abc()
+        //     {console.log("hi");}
+
+        // }
+
+        // console.log(obj)
+
+        // obj.output()
+        // obj.abc()
+        // console.log(obj.toString())
+
+        // let a =[10,20,30,40,50]
+        // console.log(a)
+
+        // let m="ankit"
+        // console.log(m)
+
+
+        let obj1 = {
+
+            output()
+            {
+                console.log("output function")
+            }
+        }
+
+        let obj2 = {
+            show()
+            {
+                console.log("show function")
+            }
+        }
+
+        obj1._proto_ = obj2   // using inheritance or prototype changes
+
+        console.log(obj1)
+        obj1.output()
+        obj1.show()        
+
+
+    </script>
+</body>
+</html>
